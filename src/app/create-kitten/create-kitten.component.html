@@ -1,0 +1,12 @@
+<form [formGroup]="newKittenForm" (ngSubmit)="addKitten()" [ngClass]="{ 'valid-form': isFormValid }">
+	<label for="name">Nom:</label>
+	<input type="text" id="name" formControlName="name">
+	<label for="breed">Race:</label>
+	<input type="text" id="breed" formControlName="breed">
+	<label for="birthDate">Date de naissance:</label>
+	<input type="date" id="birthDate" formControlName="birthDate">
+	<label for="imageUrl">Lien vers l'image:</label>
+	<input type="text" id="imageUrl" formControlName="imageUrl">
+	<button type="submit">Ajouter un chaton</button>
+  </form>
+  

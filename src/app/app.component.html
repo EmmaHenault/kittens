@@ -1,0 +1,15 @@
+<div class="container">
+	<div class="main-content">
+	  <h1>Kitten Story</h1>
+	
+	  <!-- Composant pour créer un chaton -->
+	  <app-create-kitten (kittenAdded)="onKittenAdded($event)"></app-create-kitten>
+	  
+	  <!-- Composant pour afficher la liste des chatons -->
+	  <app-list-kitten [kittens]="kittens" (kittenAdopted)="onKittenAdopted($event)"></app-list-kitten>
+	</div>
+	
+	<!-- Composant pour afficher les chatons de l'utilisateur -->
+	<app-user-kitten [userKittens]="userKittens"></app-user-kitten>
+  </div>
+  

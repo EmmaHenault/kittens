@@ -1,0 +1,14 @@
+<div class="list-kitten">
+	<div class="kitten-item" *ngFor="let kitten of kittens" (mouseover)="showInfo(kitten)" (mouseout)="hideInfo()">
+	  <img [src]="kitten.imageUrl" alt="Kitten">
+	  <div class="kitten-info" *ngIf="showInfoFlag && currentKitten === kitten">
+		<p>{{ kitten.name }}</p>
+		<p>Race: {{ kitten.breed }}</p>
+		<p>Date de naissance: {{ kitten.birthDate | date }}</p>
+	  </div>
+	  <button (click)="adoptKitten(kitten)">Adopter</button>
+	</div>
+  </div>
+  
+  
+
